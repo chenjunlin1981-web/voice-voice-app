@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '20'
 
-      - run: npm ci --registry https://registry.npmmirror.com
+      - run: npm install --registry https://registry.npmmirror.com
       - run: npm run build --registry https://registry.npmmirror.com
       - run: npx cap add android
       - run: npx cap sync android
