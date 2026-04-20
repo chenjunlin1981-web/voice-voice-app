@@ -17,8 +17,8 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - run: npm ci
-      - run: npm run build
+      - run: npm ci --registry https://registry.npmmirror.com
+      - run: npm run build --registry https://registry.npmmirror.com
       - run: npx cap add android
       - run: npx cap sync android
 
